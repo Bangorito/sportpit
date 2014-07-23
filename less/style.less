@@ -1,5 +1,6 @@
 body {
-
+background: @bg-color;
+font-family: 'pt_sansbold';
 }
 
 *{
@@ -25,12 +26,16 @@ transition: width 0.6s linear;
 .block {display: block;}
 .upper {text-transform: uppercase;}
 .mcenter {margin: 0 auto;}
+.underline {text-decoration: underline;}
 ul{list-style:none;}
 a {text-decoration: none;} 
 /* --- */
 
 /* VARIABLES */
-
+ /* MY SITE COLORS*/
+ 	@bg-color: #000000;
+ 	@header-color: #8d8d8d;
+ /* --- */
 
 
 /* --- */
@@ -84,3 +89,38 @@ a {text-decoration: none;}
 }
 
 /* --- */
+
+/*  FONTS */
+
+@font-face {
+    font-family: 'pt_sansbold';
+    src: url('/fonts/pt-sans-bold_allfont.ru-webfont.eot');
+    src: url('/fonts/pt-sans-bold_allfont.ru-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/pt-sans-bold_allfont.ru-webfont.woff') format('woff'),
+         url('/fonts/pt-sans-bold_allfont.ru-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ---  */
+
+.wrap {.size(980px,0px); .mcenter;}
+.main-bg {
+	background: url("/images/main-bg.jpg") no-repeat #000000 center top;
+	.size (100%,1045px)
+}
+
+header {
+     color: @header-color;
+	.logo {background: url("/images/logo.jpg") no-repeat; .size(270px,35px); margin: 25px 8px 0;}
+	.callback {
+		line-height: 17px;
+		width: 175px;
+		.icon-basket {background: url("/images/main-sprite.png") no-repeat scroll -99px -14px; .size (20px, 40px); padding: 0 3px;}
+		.callback-phone {font-size: 18px;}
+		a.callback-link {font-size: 13px; color: @header-color; .underline; &:hover{text-decoration: none;}}
+	}
+
+
+}
