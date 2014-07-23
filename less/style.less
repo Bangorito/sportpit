@@ -1,0 +1,86 @@
+body {
+
+}
+
+*{
+margin:0px;
+padding:0px;
+-webkit-transition: width 0.6s linear;
+-moz-transition: width 0.6s linear;
+-o-transition: width 0.6s linear;
+-ms-transition: width 0.6s linear;
+transition: width 0.6s linear;
+}
+
+/* FRAMEWORK */
+:focus{outline:none;}
+.fleft{float:left;}
+.fright{float:right;}
+.overflow{overflow:hidden;}
+.clear{clear:both;}
+.off {display:none;}
+.center {text-align:center;}
+.inline{display: inline;}
+.inline-block {display: inline-block;}
+.block {display: block;}
+.upper {text-transform: uppercase;}
+.mcenter {margin: 0 auto;}
+ul{list-style:none;}
+a {text-decoration: none;} 
+/* --- */
+
+/* VARIABLES */
+
+
+
+/* --- */
+
+/* MIXINS */
+.rounded(@radius: 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius: @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius: @bottomleft;
+  -webkit-border-top-left-radius: @topleft;
+  -moz-border-radius-topright: @topright;
+  -moz-border-radius-bottomright: @bottomright;
+  -moz-border-radius-bottomleft: @bottomleft;
+  -moz-border-radius-topleft: @topleft;
+  border-top-right-radius: @topright;
+  border-bottom-right-radius: @bottomright;
+  border-bottom-left-radius: @bottomleft;
+  border-top-left-radius: @topleft;
+}
+
+.size(@width: 1em, @height: 1em){
+	width: @width;
+	height: @height;
+}
+
+.font(@font-size: 1em, @line-height: 1,2em){
+	font-size: @font-size;
+	line-height: @line-height;
+}
+
+.bsize(@bwidth: 50%, @bheight: auto){
+  -webkit-background-size: @bwidth @bheight;
+  background-size: @bwidth @bheight;
+}
+
+
+.opacity(@opacity: 0.5) {
+  -moz-opacity: @opacity;
+  -khtml-opacity: @opacity;
+  -webkit-opacity: @opacity;
+  opacity: @opacity;
+  @opperc: @opacity * 100;
+  -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+  filter: ~"alpha(opacity=@{opperc})";
+}
+
+/* --- */
