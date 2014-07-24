@@ -103,24 +103,57 @@ a {text-decoration: none;}
 
 }
 
+
+
 /* ---  */
 
 .wrap {.size(980px,0px); .mcenter;}
-.main-bg {
-	background: url("/images/main-bg.jpg") no-repeat #000000 center top;
-	.size (100%,1045px)
-}
+.main-bg {background: url("/images/main-bg.jpg") no-repeat #000000 center top; .size (100%,1045px)}
 
 header {
-     color: @header-color;
-	.logo {background: url("/images/logo.jpg") no-repeat; .size(270px,35px); margin: 25px 8px 0;}
-	.callback {
-		line-height: 17px;
-		width: 175px;
-		.icon-basket {background: url("/images/main-sprite.png") no-repeat scroll -99px -14px; .size (20px, 40px); padding: 0 3px;}
-		.callback-phone {font-size: 18px;}
-		a.callback-link {font-size: 13px; color: @header-color; .underline; &:hover{text-decoration: none;}}
-	}
+color: @header-color;
+	 .logo {background: url("/images/logo.jpg") no-repeat; .size(270px,35px); margin: 30px 8px 0;}
+	 .callback { line-height: 17px; width: 175px; padding: 0 80px;
+
+		  .icon-basket {background: url("/images/main-sprite.png") no-repeat scroll -99px -14px; .size (20px, 40px); padding: 0 3px;}
+		  .callback-phone {font-size: 18px;}
+		  a.callback-link {font-size: 13px; color: @header-color; .underline; &:hover{text-decoration: none;}}
+	 }
+
+   .mini-cart { font-size: 13px; width: 145px;
+
+      .icon-cart {background: url("/images/main-sprite.png") no-repeat scroll -145px -14px; .size (30px, 40px); padding: 0 3px;}
+   
+
+   }
 
 
 }
+
+.top-menu {background: url("/images/top-menu-bg.png") no-repeat;.size(982px,100px); margin: 20px 0 0;
+
+    ul{}
+      ul li {.fleft; padding: 0px 15px 0 5px;}
+        ul li a { font-family: 'Myriad Pro'; color: #FFFFFF; .font(15px); .upper; .block; padding: 10px; margin: 13px 0 0;  
+          &:hover {background: #ab0000; .rounded(@radius: 4px)}
+        }
+
+    .search { margin: 13px 10px 0;
+       input.search-input {background: url("/images/search-bg.png") no-repeat; .size(275px, 35px); border: none; padding: 0 0 0 10px; .font(15px); color: #FFFFFF; }
+       input.search-button {background: url("/images/search-button.png") no-repeat; border: none; .size(26px,34px); cursor: pointer;}
+    }
+
+}
+
+ .catlog-menu { margin: 80px 10px 0;
+
+    ul {}
+      ul li {.block; .fleft; width: 170px; padding: 0 0 10px; margin:0 70px 13px 0; background: url("/images/cat-menu-hr.png") no-repeat bottom;}
+      ul li:nth-child(4n+1) {clear: left; padding-left: 0;}
+        ul li a {.upper; .font(13px); color: #FFFFFF;
+          &:hover {color: #fe6745;}
+
+        }
+
+
+ }
