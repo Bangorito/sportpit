@@ -67,9 +67,33 @@
  			</ul>
 
  		</div>
+
+ 		<div id="slides" class="fleft">
+        	<div class="slides_container">
+       			<div><img src="/images/slide1.png" /></div>
+       			<div><img src="/images/slide1.png" /></div>
+            </div>
+
+        </div>
+
+        <div class="banner-menu">
+        	<a class="banner-pos1 banner-menu-wrap" href="#"><div class="overlay">для бойцов</div></a>
+        	<a class="banner-pos2 banner-menu-wrap" href="#"><div class="overlay">для бодибилдеров</div></a>
+        	<a class="banner-pos3 banner-menu-wrap" href="#"><div class="overlay">для женщин</div></a>
+        	<a class="banner-pos4 banner-menu-wrap" href="#"><div class="overlay">для похудения</div></a>
+        	<a class="banner-pos5 banner-menu-wrap" href="#"><div class="overlay">для новичков</div></a>
+        	<a class="banner-pos6 banner-menu-wrap" href="#"><div class="overlay">для кроссфита</div></a>
+        </div>
+
  	</div>
 </div>
 <script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/slides.min.jquery.js" type="text/javascript"></script>
+<script>
+    $(function(){
+      $("#slides").slides(); // контейнер с элементами слайдера
+    });
+</script>
 <script src="/js/less.js" type="text/javascript"></script>
 </body>
 </html>

@@ -88,6 +88,8 @@ a {text-decoration: none;}
   filter: ~"alpha(opacity=@{opperc})";
 }
 
+
+
 /* --- */
 
 /*  FONTS */
@@ -134,7 +136,7 @@ color: @header-color;
 
     ul{}
       ul li {.fleft; padding: 0px 15px 0 5px;}
-        ul li a { font-family: 'Myriad Pro'; color: #FFFFFF; .font(15px); .upper; .block; padding: 10px; margin: 13px 0 0;  
+        ul li a { font-family: 'Myriad Pro'; color: #FFFFFF; .font(15px); .upper; .block; padding: 10px; margin: 13px 0 0;    transition: all 0.4s ease-in-out;
           &:hover {background: #ab0000; .rounded(@radius: 4px)}
         }
 
@@ -150,10 +152,50 @@ color: @header-color;
     ul {}
       ul li {.block; .fleft; width: 170px; padding: 0 0 10px; margin:0 70px 13px 0; background: url("/images/cat-menu-hr.png") no-repeat bottom;}
       ul li:nth-child(4n+1) {clear: left; padding-left: 0;}
-        ul li a {.upper; .font(13px); color: #FFFFFF;
+        ul li a {.upper; .font(13px); color: #FFFFFF;  transition: all 0.2s ease-in-out;
           &:hover {color: #fe6745;}
 
         }
 
 
  }
+
+ #slides {margin: 200px 0 0; height: 310px;}
+ .slides_container {.size(978px,380px);}
+ .slides_container div { height: 295px; .block;}  
+
+.pagination {margin: -145px 5px 0; position: relative; width: 100px; z-index: 99999;}
+
+.pagination li {.fleft; list-style: none outside none; margin: 0 3px;}
+
+.pagination li a {
+    background-image: url("/images/pagination.png");
+    background-position: 0 0;
+    .block;
+    .fleft;
+    height: 0;
+    overflow: hidden;
+    padding-top: 12px;
+    width: 12px;
+}
+
+.pagination li.current a {
+    background-position: 0 -13px;
+}
+
+
+.banner-menu {position: relative; z-index: 999999; margin: 10px 0 0;
+   .banner-menu-wrap {.size(325px,150px); .block; .fleft; background: url("/images/banner-menu-sprite.jpg") no-repeat; .center; color: #FFFFFF; .upper; .font(15px); overflow: hidden; 
+      .overlay {.size(100%,100%); padding: 70px 0 0;  transition: all 0.3s ease-in-out;
+      &:hover {background: rgba(169,0,0, 0.3);}
+    }
+
+    }
+   .banner-pos1 {background-position: 0px 0;}
+   .banner-pos2 {background-position: -321px 0;}
+   .banner-pos3 {background-position: -654px 0;}
+   .banner-pos4 {background-position: 0 -150px;}
+   .banner-pos5 {background-position: -329px -150px;}
+   .banner-pos6 {background-position: -654px -150px;}
+}
+
