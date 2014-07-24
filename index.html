@@ -65,7 +65,7 @@
  				<li><a href="#">аксессуары</a></li>
  				<li><a href="#">распродажа</a></li>
  			</ul>
-
+          <div class="clear"></div>
  		</div>
 
  		<div id="slides" class="fleft">
@@ -73,9 +73,9 @@
        			<div><img src="/images/slide1.png" /></div>
        			<div><img src="/images/slide1.png" /></div>
             </div>
-
+        <div class="clear"></div>
         </div>
-
+ 
         <div class="banner-menu">
         	<a class="banner-pos1 banner-menu-wrap" href="#"><div class="overlay">для бойцов</div></a>
         	<a class="banner-pos2 banner-menu-wrap" href="#"><div class="overlay">для бодибилдеров</div></a>
@@ -83,6 +83,18 @@
         	<a class="banner-pos4 banner-menu-wrap" href="#"><div class="overlay">для похудения</div></a>
         	<a class="banner-pos5 banner-menu-wrap" href="#"><div class="overlay">для новичков</div></a>
         	<a class="banner-pos6 banner-menu-wrap" href="#"><div class="overlay">для кроссфита</div></a>
+        	<div class="clear"></div>
+        </div>
+
+        <div class="best-items">
+  			<div id="slides2" class="pagnone fleft">
+        		<div class="slides_container">
+       				<div><img src="/images/slide1.png" /></div>
+       				<div><img src="/images/slide1.png" /></div>
+            </div>
+            <div class="clear"></div>
+        </div>       	
+        
         </div>
 
  	</div>
@@ -92,6 +104,7 @@
 <script>
     $(function(){
       $("#slides").slides(); // контейнер с элементами слайдера
+      $("#slides2").slides({paginationClass: 'pagination'}); // контейнер с элементами слайдера
     });
 </script>
 <script src="/js/less.js" type="text/javascript"></script>

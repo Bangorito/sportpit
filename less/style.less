@@ -164,11 +164,11 @@ color: @header-color;
  .slides_container {.size(978px,380px);}
  .slides_container div { height: 295px; .block;}  
 
-.pagination {margin: -145px 5px 0; position: relative; width: 100px; z-index: 99999;}
+ #slides .pagination {margin: -145px 5px 0; position: relative; width: 100px; z-index: 99999;}
 
-.pagination li {.fleft; list-style: none outside none; margin: 0 3px;}
+ #slides .pagination li {.fleft; list-style: none outside none; margin: 0 3px;}
 
-.pagination li a {
+ #slides .pagination li a {
     background-image: url("/images/pagination.png");
     background-position: 0 0;
     .block;
@@ -179,12 +179,12 @@ color: @header-color;
     width: 12px;
 }
 
-.pagination li.current a {
+ #slides .pagination li.current a {
     background-position: 0 -13px;
 }
 
 
-.banner-menu {position: relative; z-index: 999999; margin: 10px 0 0;
+.banner-menu {position: relative; z-index: 1000; margin: 10px 0 0;
    .banner-menu-wrap {.size(325px,150px); .block; .fleft; background: url("/images/banner-menu-sprite.jpg") no-repeat; .center; color: #FFFFFF; .upper; .font(15px); overflow: hidden; 
       .overlay {.size(100%,100%); padding: 70px 0 0;  transition: all 0.3s ease-in-out;
       &:hover {background: rgba(169,0,0, 0.3);}
@@ -197,5 +197,16 @@ color: @header-color;
    .banner-pos4 {background-position: 0 -150px;}
    .banner-pos5 {background-position: -329px -150px;}
    .banner-pos6 {background-position: -654px -150px;}
+}
+
+
+.best-items {background: #FFFFFF; .size(980px,285px)}
+
+#slides2 ul.pagintaion li {
+display: none !important;
+}
+
+.pagnone ul.pagintaion {
+  display: none;
 }
 
