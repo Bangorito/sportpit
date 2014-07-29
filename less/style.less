@@ -3,6 +3,7 @@ background: @bg-color;
 font-family: 'pt_sansbold';
 }
 
+h1 {  color: @title-color; .font(30px); font-weight: normal; .upper;}
 *{
 margin:0px;
 padding:0px;
@@ -35,6 +36,7 @@ a {text-decoration: none;}
  /* MY SITE COLORS*/
  	@bg-color: #000000;
  	@header-color: #8d8d8d;
+  @title-color: #4c4c4c;
  /* --- */
 
 
@@ -136,7 +138,7 @@ color: @header-color;
 
 }
 
-.top-menu {background: url("/images/top-menu-bg.png") no-repeat;.size(982px,100px); margin: 20px 0 0;
+.top-menu {background: url("/images/top-menu-bg.png") no-repeat;.size(982px,100px); margin: 20px 0 0; position: relative; z-index: 1000;
 
     ul{
      li {.fleft; padding: 0px 15px 0 5px;
@@ -304,3 +306,93 @@ footer {
 
 .copy {.font(13px,18px); color: #8d8d8d; margin: 35px 0 30px;}
 }
+
+
+.container { margin: 140px auto; position: relative;
+    z-index: 10;
+
+.fugure_wrap {
+    background: url("/images/mainbg.png") repeat-y scroll center top rgba(0, 0, 0, 0);
+    margin: auto;
+    position: relative;
+    min-width: 980px;
+}
+.fugure_wrap:before {
+    background: url("/images/container.png") repeat-y scroll center top rgba(0, 0, 0, 0);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.figure_inner {
+    position: relative;
+    width: 100%;
+}
+.figure_inner:before {
+    background: url("/images/header.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+    content: "";
+    display: block;
+    height: 154px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.figure_inner:after {
+    background: url("/images/bottom.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 198px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.content {
+    margin: auto;
+    padding: 50px 0;
+    width: 980px;
+}
+
+
+.content-right {
+  width: 730px;
+  position: relative;
+  z-index: 10000;
+}
+
+.left-menu {position: relative; z-index: 10000; width: 180px; margin: 55px 0 0 7px;
+  ul {
+    li { background: url("/images/left-menu-hr.png") no-repeat bottom; 
+      a {.font (13px); color:#000000; .upper; .block; height: 43px; padding: 20px 0 0 5px;
+        &:hover {background: url("/images/left-menu-bg.png") no-repeat; padding: 20px 0 0 5px; height: 43px; color: #FFFFFF;}
+        
+
+      }
+    }
+  }
+}
+
+
+}
+
+.content-right {
+  .catalog {
+    ul {
+      li {.size(223px,415px);
+
+        .cat-hr {background: url("/images/cat-hr.jpg") no-repeat; .size(200px,1px);}
+      }
+    }
+
+  }
+
+
+}
+
