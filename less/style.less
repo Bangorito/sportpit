@@ -387,7 +387,7 @@ footer {
   z-index: 10000;
 }
 
-.left-menu {position: relative; z-index: 10000; width: 180px; margin: 55px 0 0 7px;
+.left-menu {position: relative; z-index: 1000; width: 180px; margin: 55px 0 0 7px;
   ul {
     li { background: url("/images/left-menu-hr.png") no-repeat bottom;
       a {.font (13px); color:#000000; .upper; .block; height: 43px; padding: 20px 0 0 5px;
@@ -546,7 +546,37 @@ table.tbl { background: #f0f0f0; .font(13px); color: #737373;
 }
 
 
+.popup_block {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 20px #000000;
+    color: #000000;
+    display: none;
+    float: left;
+    left: 50%;
+    min-height: 345px;
+    padding: 20px;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    z-index: 99999;
+}
 
+img.btn_close {
+    float: right;
+    margin: -48px -51px 0 0;
+}
+#fade {
+    background: none repeat scroll 0 0 #000000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
 
 
 
