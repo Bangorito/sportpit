@@ -29,8 +29,9 @@ transition: width 0.6s linear;
 .upper {text-transform: uppercase;}
 .mcenter {margin: 0 auto;}
 .underline {text-decoration: underline;}
+.vtop {vertical-align: top;}
 ul{list-style:none;}
-a {text-decoration: none;} 
+a {text-decoration: none;}
 /* --- */
 
 /* VARIABLES */
@@ -132,7 +133,7 @@ color: @header-color;
    .mini-cart { font-size: 13px; width: 145px;
 
       .icon-cart {background: url("/images/main-sprite.png") no-repeat scroll -145px -14px; .size (30px, 40px); padding: 0 3px;}
-   
+
 
    }
 
@@ -173,7 +174,7 @@ color: @header-color;
 
  #slides {margin: 200px 0 0; height: 310px;}
  .slides_container {.size(978px,380px);}
- .slides_container div {.block;}  
+ .slides_container div {.block;}
 
  #slides .pagination {margin: -145px 5px 0; position: relative; width: 100px; z-index: 99999;}
 
@@ -196,7 +197,7 @@ color: @header-color;
 
 
 .banner-menu {position: relative; z-index: 1000; margin: 10px 0 0;
-   .banner-menu-wrap {.size(325px,150px); .block; .fleft; background: url("/images/banner-menu-sprite.jpg") no-repeat; .center; color: #FFFFFF; .upper; .font(15px); overflow: hidden; 
+   .banner-menu-wrap {.size(325px,150px); .block; .fleft; background: url("/images/banner-menu-sprite.jpg") no-repeat; .center; color: #FFFFFF; .upper; .font(15px); overflow: hidden;
       .overlay {.size(100%,100%); padding: 70px 0 0;  transition: all 0.3s ease-in-out;
       &:hover {background: rgba(169,0,0, 0.3);}
     }
@@ -229,24 +230,24 @@ color: @header-color;
   .next {left: 945px;}
   .next, .prev {.block; .size(25px,43px);position: absolute;z-index: 101;top:115px;}
 
-  .prevbg {background: url("/images/main-sprite.png") no-repeat scroll -93px -51px rgba(0, 0, 0, 0); 
+  .prevbg {background: url("/images/main-sprite.png") no-repeat scroll -93px -51px rgba(0, 0, 0, 0);
     &:hover {background-position: -93px -89px;}
   }
   .nextbg {background: url("/images/main-sprite.png") no-repeat scroll -152px -51px rgba(0, 0, 0, 0);
     &:hover {background-position: -152px -91px;}
   }
 
-  
+
 }
 
 .materials {
   background: url("/images/stati-bg.jpg") no-repeat; .size(975px,337px);
-  .material-wrap { 
+  .material-wrap {
     padding: 50px 15px 0;
     .material-title {background: url("/images/material-title.png") no-repeat; .size(365px,26px)}
   }
 
-  ul { 
+  ul {
     margin: 35px 0 0;
     li {.block; .fleft; width: 240px; margin:0 70px 10px 0; background: url("/images/material-hr.png") no-repeat bottom; padding: 0px 0 10px;
       &:nth-child(3n+1) {clear: left; padding-left: 0;}
@@ -301,7 +302,7 @@ footer {
       .fb {.bg-pos(-144px,-149px)}
       .go {.bg-pos(-187px,-149px)}
       .in {.bg-pos(-230px,-149px)}
-    
+
   }
 }
 
@@ -311,6 +312,24 @@ footer {
 
 .container { margin: 140px auto; position: relative;
     z-index: 10;
+
+.fugure_wrap_cart {
+    background: url("/images/cart-bg.jpg") repeat-y scroll center top rgba(0, 0, 0, 0);
+    margin: auto;
+    position: relative;
+    min-width: 980px;
+}
+
+.fugure_wrap_cart:before {
+    background: url("/images/container.png") repeat-y scroll center top rgba(0, 0, 0, 0);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
 .fugure_wrap {
     background: url("/images/mainbg.png") repeat-y scroll center top rgba(0, 0, 0, 0);
@@ -370,10 +389,10 @@ footer {
 
 .left-menu {position: relative; z-index: 10000; width: 180px; margin: 55px 0 0 7px;
   ul {
-    li { background: url("/images/left-menu-hr.png") no-repeat bottom;  
+    li { background: url("/images/left-menu-hr.png") no-repeat bottom;
       a {.font (13px); color:#000000; .upper; .block; height: 43px; padding: 20px 0 0 5px;
         &:hover {background: url("/images/left-menu-bg.png") no-repeat; color: #FFFFFF;}
-        
+
 
       }
     }
@@ -402,7 +421,7 @@ footer {
 
   }
 
- 
+
 }
 
 .item-wrap {
@@ -436,7 +455,7 @@ footer {
       span {border-bottom: 1px dotted;}
       &:hover {background: none repeat scroll 0 0 #f0f0f0; color: #737373; .rounded(5px); cursor: pointer; }
     }
-    .active {background: none repeat scroll 0 0 #f0f0f0; color: #737373; .rounded(5px); 
+    .active {background: none repeat scroll 0 0 #f0f0f0; color: #737373; .rounded(5px);
       span {border-bottom: none;}
     }
 
@@ -456,8 +475,8 @@ footer {
         .red-p {color: #d90c02; .font(13px,18px);}
       }
 
-      
-      
+
+
   }
 }
 
@@ -477,6 +496,31 @@ footer {
       }
       }
     }
+}
+
+
+.big-cart { position: relative; z-index: 99999;
+  .big-cart-new-item{ margin: 18px 0 0; background: url("/images/item-hr.jpg") repeat-x bottom; padding: 0 0 18px;
+    .big-cart-img {.size(170px,170px); border: 1px solid #e5e5e5; .rounded(3px); .center;
+      img {width: 100px; margin: 25px 0 0;}
+    }
+    .big-cart-img{ }
+    .big-cart-info {.vtop; margin: 60px 0 0 35px; padding: 0 35px; background: url("/images/right-hr.jpg") no-repeat left; width: 230px;
+      .big-cart-title {.font(30px); color: #d90c02; }
+      .big-cart-descr {.font(13px); color: #737373;}
+      .big-cart-ves {.font(13px); color: #a3a3a3;}
+    }
+    .big-cart-count {.rounded(4px); .vtop; margin: 75px 0 0; padding: 0 35px; background: url("/images/right-hr.jpg") no-repeat left;
+      span {.block; color: #737373; border: 2px solid #d3d3d3; padding: 7px; .font(15px); .rounded(4px); }
+  }
+    .big-cart-price {.font(30px); color: #000000; .upper; .vtop; margin: 80px 0 0; background: url("/images/right-hr.jpg") no-repeat left; padding: 0 30px;}
+    .big-cart-del {.vtop; margin: 83px 0 0; background: url("/images/right-hr.jpg") no-repeat left; padding: 0 35px;}
+  }
+
+.big-cart-itogo { width: 350px; margin: 20px 0 0;
+  .big-cart-final-price {.font(30px); color: #d90c02; .upper; margin: 5px 0 0;}
+  .big-cart-order-button {}
+}
 }
 
 
